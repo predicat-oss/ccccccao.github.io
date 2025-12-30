@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人展示 | 曹绮丹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fff0f6, #ffe4e6, #fff7ed);
+            color: #444;
+            scroll-behavior: smooth;
+        }
+
+        /* ===== 顶部胶囊导航 ===== */
+        .top-nav {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, .9);
+            backdrop-filter: blur(10px);
+            padding: 14px 30px;
+            border-radius: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+            display: flex;
+            gap: 26px;
+            z-index: 100;
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #666;
+            padding: 8px 18px;
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        .top-nav a:hover {
+            background: #fbcfe8;
+            color: #be185d;
+            transform: translateY(-2px);
+        }
+
+        /* ===== 首屏 ===== */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            padding: 0 120px;
+        }
+
+        .hero-text h1 {
+            font-size: 64px;
+            color: #db2777;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            max-width: 540px;
+            line-height: 2;
+            color: #666;
+        }
+
+        .hero-photo img {
+            width: 360px;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 60px 60px 20px 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .15);
+        }
+
+        /* ===== 通用模块 ===== */
+        .section {
+            padding: 120px 140px;
+        }
+
+        .section-title {
+            font-size: 46px;
+            color: #be185d;
+            margin-bottom: 60px;
+        }
+
+        /* ===== 交错布局 ===== */
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .box {
+            background: #fff;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .12);
+        }
+
+        .box p {
+            font-size: 20px;
+            line-height: 2.1;
+            margin-bottom: 16px;
+        }
+
+        /* ===== 视频区 ===== */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .video {
+            background: #fff;
+            padding: 18px;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, .12);
+        }
+
+        .video video {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .video p {
+            margin-top: 14px;
+            text-align: center;
+            color: #777;
+        }
+
+        /* ===== 页脚 ===== */
+        footer {
+            padding: 60px;
+            text-align: center;
+            color: #888;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <a href="#hero">首页</a>
+        <a href="#info">基本信息</a>
+        <a href="#style">个人风采</a>
+        <a href="#intern">实习经历</a>
+        <a href="#award">获奖情况</a>
+    </div>
+
+    <!-- 首屏 -->
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <h1>曹绮丹</h1>
+            <p>
+                数据科学与大数据技术专业在读学生，
+                注重理性分析与感性表达的融合。
+                希望通过前端展示与数据分析相结合的方式，
+                构建具有个人风格的技术作品。
+            </p>
+        </div>
+        <div class="hero-photo">
+            <img src="cqd.jpg">
+        </div>
+    </section>
+
+    <!-- 基本信息 -->
+    <section class="section" id="info">
+        <h2 class="section-title">基本信息</h2>
+        <div class="split">
+            <div class="box">
+                <p>姓名：曹绮丹</p>
+                <p>性别：女</p>
+                <p>专业：数据科学与大数据技术</p>
+                <p>学校：大连海洋大学</p>
+                <p>学号：2405180104</p>
+                <p>联系电话：14785225496</p>
+            </div>
+            <div class="box">
+                <p>
+                    在校期间系统学习了数据分析基础、程序设计与 Web 前端相关课程，
+                    对数据可视化与页面交互设计具有浓厚兴趣。
+                </p>
+                <p>
+                    学习过程中注重逻辑思维与审美表达的结合，
+                    能够独立完成课程项目页面设计与功能实现，
+                    并不断通过实践提升综合能力。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 风采 -->
+    <section class="section" id="style">
+        <h2 class="section-title">个人风采展示</h2>
+        <div class="video-grid">
+            <div class="video">
+                <video src="c.mp4" controls muted onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+
+
+            </div>
+            <div class="video">
+                <video src="q.mp4" controls muted onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+
+            </div>
+            <div class="video">
+                <video src="d.mp4" controls muted onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 实习 -->
+    <section class="section" id="intern">
+        <h2 class="section-title">实习经历</h2>
+        <div class="split">
+            <div class="box">
+                <p>
+                    在字节跳动实习期间，主要协助完成数据整理、
+                    基础统计分析与结果展示等工作。
+                    通过对真实业务数据的处理，
+                    加深了对数据分析流程和规范性的理解。
+                </p>
+                <p>
+                    在实习过程中，逐步提升了对数据结果的解读能力，
+                    能够将分析结论以清晰、直观的形式进行展示。
+                </p>
+            </div>
+            <div class="box">
+                <p>
+                    在阿里云相关部门实习期间，
+                    接触了企业级数据平台的基本结构与运行方式，
+                    参与数据质量检查与基础支持工作。
+                </p>
+                <p>
+                    该阶段实习有效提升了对大规模数据处理系统的整体认知，
+                    同时增强了对工程化流程与团队协作的理解。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 获奖 -->
+    <section class="section" id="award">
+        <h2 class="section-title">获奖情况</h2>
+        <div class="box">
+            <p>• 获得学院优秀学生奖学金</p>
+            <p>• 多门专业课程设计成绩评定为优秀</p>
+            <p>• 在团队项目实践中表现突出，获得课程综合优秀评价</p>
+            <p>
+                通过竞赛与课程实践不断积累经验，
+                在学习态度、执行能力和综合素质方面得到全面提升。
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Web 
+    </footer>
+
+</body>
+
+</html>
